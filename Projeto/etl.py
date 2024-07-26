@@ -25,6 +25,7 @@ sale_items = reader_csv(path_file)
 print(sale_items)
 """
 
+
 """
 def filter_products_delivered(list_p: list[dict]) -> list[dict]:
     list_filtered_product = []
@@ -40,15 +41,9 @@ def filter_products_delivered(list_p: list[dict]) -> list[dict]:
     return list(filter(lambda product: product.get('entregue') == 'True', list_p))
 
 
-"""
-list_product = reader_csv(path_file)
-product_delivered = filter_products_delivered(list_product)
-print(product_delivered)
-"""
-
-
 def sum_value_products(list_filtered_product: list[dict]) -> int:
     total_value = 0
     for product in list_filtered_product:
         total_value += int(product.get("price"))
     return total_value
+
