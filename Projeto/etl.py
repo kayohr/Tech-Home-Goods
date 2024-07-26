@@ -2,7 +2,7 @@ import csv
 
 path_file = 'vendas.csv'
 
-
+"""]
 def reader_csv(reader_file_csv: str) -> list[dict]:
     list = []
     with open(reader_file_csv, mode="r", encoding="utf-8 ") as file:
@@ -10,7 +10,14 @@ def reader_csv(reader_file_csv: str) -> list[dict]:
         for line in reader:
             list.append(line)
     return list
+"""
 
+
+#Refatorando
+def reader_csv(reader_file_csv: str) -> list[dict]:
+    with open(reader_file_csv, mode="r", encoding="utf-8") as file:
+        reader = csv.DictReader(file)
+        return list(reader)
 
 """
 sale_items: list[dict]
@@ -37,19 +44,6 @@ def filter_products_delivered(list_p: list[dict]) -> list[dict]:
 list_product = reader_csv(path_file)
 product_delivered = filter_products_delivered(list_product)
 print(product_delivered)
-"""
-
-
-"""
- lista = [2, 3, 1, 5, 1, 7, 8, 8, 9, 15, 1, 1]
- def is_not_one (value):
-   return value != 1
- lista = list(filter(is_not_one, lista))
- print(lista)
-
-lista = [2, 3, 1, 5, 1, 7, 8, 8, 9, 15, 1, 1]
-lista = list(filter(lambda x: x != 1, lista))
-print(lista)
 """
 
 
