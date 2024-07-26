@@ -1,0 +1,13 @@
+produto,price,entregue
+cadeira,500,False
+mesa,200,True
+mouse,50,False
+teclado,80,True
+monitor,700,False
+impressora,300,True
+notebook,1500,False
+smartphone,1000,True
+tablet,600,False
+caixa_de_som,150,True
+pen_drive,20,False
+
