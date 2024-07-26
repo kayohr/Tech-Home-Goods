@@ -52,11 +52,3 @@ def sum_value_products(list_filtered_product: list[dict]) -> int:
     for product in list_filtered_product:
         total_value += int(product.get("price"))
     return total_value
-
-
-"""
-list_product = reader_csv(path_file)
-product_delivered = filter_products_delivered(list_product)
-value_products_delivered = sum_value_products(product_delivered)
-print(value_products_delivered)
-"""
