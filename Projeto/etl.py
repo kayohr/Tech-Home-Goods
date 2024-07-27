@@ -2,7 +2,7 @@ import csv
 
 path_file = 'vendas.csv'
 
-#Cod antigo
+# Cod antigo
 """]
 def reader_csv(reader_file_csv: str) -> list[dict]:
     list = []
@@ -20,7 +20,7 @@ def read_csv(read_file_csv: str) -> list[dict]:
         return list(reader)
 
 
-#Cod antigo
+# Cod antigo
 """
 def filter_products_delivered(list_p: list[dict]) -> list[dict]:
     list_filtered_product = []
@@ -30,7 +30,7 @@ def filter_products_delivered(list_p: list[dict]) -> list[dict]:
     return list_filtered_product
 """
 
-#Refatorado
+# Refatorado
 def filter_products_delivered(list_p: list[dict]) -> list[dict]:
     return list(filter(lambda product: product.get('entregue') == 'True', list_p))
 
