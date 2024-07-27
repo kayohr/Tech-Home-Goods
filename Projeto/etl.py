@@ -14,8 +14,8 @@ def reader_csv(reader_file_csv: str) -> list[dict]:
 """
 
 #Refatorado
-def reader_csv(reader_file_csv: str) -> list[dict]:
-    with open(reader_file_csv, mode="r", encoding="utf-8") as file:
+def read_csv(read_file_csv: str) -> list[dict]:
+    with open(read_file_csv, mode="r", encoding="utf-8") as file:
         reader = csv.DictReader(file)
         return list(reader)
 
